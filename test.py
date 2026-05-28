@@ -6,12 +6,13 @@ class Student:
     """
     Class representing a Student object
     """
-    def __init__(s, id, name):
-        s.id = id
-        s.name = name
-        s.gradez = []
-        s.isPassed = "NO"
-        s.honor = "?"
+    def __init__(self, student_id, name):
+        self.id = student_id
+        self.name = name
+        self.gradez = []
+        self.isPassed = "NO"
+        self.honor = "?"
+        self.letter = ""
 
     def addGrades(self, g):
         self.gradez.append(g)
@@ -24,7 +25,7 @@ class Student:
 
     def check_honor(self):
         """ Checks if the student is an honor student based on their average grade """
-        if self.calcAverage() > 90:
+        if self.calcaverage() > 90:
             self.honor = "yep"
 
     def delete_grade(self, index):
