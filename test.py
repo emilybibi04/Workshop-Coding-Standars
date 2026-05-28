@@ -6,11 +6,21 @@ class Student:
     """
     Class representing a Student object
     """
+<<<<<<< HEAD
     def __init__(s, id, name):
         s.id = id
         s.name = name
         s.gradez = []
         s.honor = "?"
+=======
+    def __init__(self, student_id, name):
+        self.id = student_id
+        self.name = name
+        self.gradez = []
+        self.isPassed = "NO"
+        self.honor = "?"
+        self.letter = ""
+>>>>>>> 597e825e0bc43072804ea14dd25a3bf9366cd843
 
     def add_grades(self, g):
         """Function add grades."""
