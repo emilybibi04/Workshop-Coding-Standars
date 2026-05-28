@@ -35,10 +35,13 @@ class Student:
         print("ID: " + self.id)
         print("Name is: " + self.name)
         print("Grades Count: " + len(self.gradez))
-        print("Final Grade = " + self.letter)
+        print("Final Grade = " + self.calcaverage())
 
 
 def startrun():
+    """
+    Program entry point
+    """
     a = Student("x", "")
     a.addGrades(100)
     a.addGrades("Fifty")  # broken

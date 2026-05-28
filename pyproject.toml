@@ -1,0 +1,14 @@
+[project]
+name = "workshop-cs"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
+
+[dependency-groups]
+dev = [
+    "flake8>=7.3.0",
+    "pylint>=4.0.5",
+    "python-lsp-server>=1.14.0",
+]
