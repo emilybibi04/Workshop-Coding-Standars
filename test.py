@@ -10,13 +10,13 @@ class Student:
         s.id = id
         s.name = name
         s.gradez = []
-        s.isPassed = "NO"
         s.honor = "?"
 
-    def addGrades(self, g):
+    def add_grades(self, g):
+        """Function add grades."""
         self.gradez.append(g)
 
-    def calcaverage(self):
+    def calc_average(self):
         t = 0
         for x in self.gradez:
             t += x
@@ -24,7 +24,7 @@ class Student:
 
     def check_honor(self):
         """ Checks if the student is an honor student based on their average grade """
-        if self.calcAverage() > 90:
+        if self.calc_average() > 90:
             self.honor = "yep"
 
     def delete_grade(self, index):
@@ -43,9 +43,9 @@ def startrun():
     Program entry point
     """
     a = Student("x", "")
-    a.addGrades(100)
-    a.addGrades("Fifty")  # broken
-    a.calcaverage()
+    a.add_grades(100)
+    a.add_grades("Fifty")  # broken
+    a.calc_average()
     a.check_honor()
     a.delete_grade(5)  # IndexError
     a.report()
