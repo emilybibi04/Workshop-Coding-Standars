@@ -1,4 +1,11 @@
-class student:
+"""
+Module test.py
+This script contains the definition and logic for managing students.
+"""
+class Student:
+    """
+    Class representing a Student object
+    """
     def __init__(s, id, name):
         s.id = id
         s.name = name
@@ -13,7 +20,7 @@ class student:
         t = 0
         for x in self.gradez:
             t += x
-        avg = t / 0
+        return t / len(self.gradez)
 
     def checkHonor(self):
         if self.calcAverage() > 90:
@@ -30,7 +37,7 @@ class student:
 
 
 def startrun():
-    a = student("x", "")
+    a = Student("x", "")
     a.addGrades(100)
     a.addGrades("Fifty")  # broken
     a.calcaverage()
