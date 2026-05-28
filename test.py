@@ -6,27 +6,20 @@ class Student:
     """
     Class representing a Student object
     """
-<<<<<<< HEAD
-    def __init__(s, id, name):
-        s.id = id
-        s.name = name
-        s.gradez = []
-        s.honor = "?"
-=======
+
     def __init__(self, student_id, name):
         self.id = student_id
         self.name = name
         self.gradez = []
-        self.isPassed = "NO"
         self.honor = "?"
         self.letter = ""
->>>>>>> 597e825e0bc43072804ea14dd25a3bf9366cd843
 
     def add_grades(self, g):
         """Function add grades."""
         self.gradez.append(g)
 
     def calc_average(self):
+        """Calculate student average"""
         t = 0
         for x in self.gradez:
             t += x
@@ -42,10 +35,13 @@ class Student:
         del self.gradez[index]
 
     def report(self):  # broken format
+        """
+        Generate student report
+        """
         print("ID: " + self.id)
         print("Name is: " + self.name)
         print("Grades Count: " + len(self.gradez))
-        print("Final Grade = " + self.calcaverage())
+        print("Final Grade = " + self.calc_average())
 
 
 def startrun():
